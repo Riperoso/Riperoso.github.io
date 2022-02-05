@@ -1,13 +1,14 @@
-import * as React from 'react'
+import * as React from 'react';
+import Header from './components/Header';
+import Nav from './components/Nav';
 
-// 1. import `ChakraProvider` component
 
 function App() {
-  // 2. Wrap ChakraProvider at the root of your app
   return (
-    <div>
-    </div>
-
+    <>
+      <Nav />
+      <Header />
+    </>
   )
 }
 
