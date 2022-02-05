@@ -28,7 +28,7 @@ export default function WithSubnavigation() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue('gray.900', 'gray.600')}
+        bg={useColorModeValue('darkfolio', 'gray.600')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
@@ -54,8 +54,9 @@ export default function WithSubnavigation() {
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
-            color={useColorModeValue('bluetiful', 'white')}>
-            Logo
+            fontWeight='semibold'
+            color={useColorModeValue('white', 'white')}>
+            Filipe Andrade
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -72,13 +73,13 @@ export default function WithSubnavigation() {
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
             fontWeight={600}
-            color={'white'}
-            bg={'bluetiful'}
+            color={'black'}
+            bg={'white'}
             href={'#'}
             _hover={{
-              bg: 'pink.300',
+              bg: 'gray.300',
             }}>
-            Sign Up
+            Contato
           </Button>
         </Stack>
       </Flex>
@@ -92,7 +93,7 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('white', 'gray.200');
-  const linkHoverColor = useColorModeValue('bluetiful', 'white');
+  const linkHoverColor = useColorModeValue('gray.300', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
@@ -105,6 +106,7 @@ const DesktopNav = () => {
                 p={2}
                 href={navItem.href ?? '#'}
                 fontSize={'sm'}
+                borderRadius="md"
                 fontWeight={500}
                 color={linkColor}
                 _hover={{
@@ -236,17 +238,13 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: 'Inspiration',
+    label: 'Sobre mim',
   },
   {
-    label: 'Find Work',
+    label: 'Habilidades',
   },
   {
-    label: 'Learn Design',
-    href: '#',
-  },
-  {
-    label: 'Hire Designers',
+    label: 'Projetos',
     href: '#',
   },
 ];

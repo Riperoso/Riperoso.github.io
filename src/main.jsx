@@ -7,10 +7,14 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { extendTheme } from "@chakra-ui/react"
 
 const theme = extendTheme({
+    shadows: {
+      outline: '0 0 0 3px #EDEADE',
+    },
     colors: {
       transparent: 'transparent',
       black: '#000',
       white: '#fff',
+      darkfolio: '#111111',
       gray: {
         50: '#f7fafc',
         // ...
